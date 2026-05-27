@@ -156,8 +156,6 @@
       font-family: var(--font-mono);
     }
 
-    .ty-badge i { font-size: 0.7rem; }
-
     .ty-title {
       font-family: var(--font-display);
       font-size: clamp(2rem, 5vw, 2.75rem);
@@ -205,7 +203,7 @@
       justify-content: center;
     }
 
-    .ty-redirect span {
+    .ty-redirect .ty-count {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -290,13 +288,12 @@
     </div>
 
     <div class="ty-redirect">
-      <span id="countdown">6</span>
-      <span style="background: none; border: none; width: auto;">Redirecting you back to portfolio...</span>
+      <span class="ty-count" id="countdown">6</span>
+      <span>Redirecting you back to portfolio...</span>
     </div>
   </div>
 
   <script>
-    // Countdown
     let count = 6;
     const cd = document.getElementById('countdown');
     const timer = setInterval(() => {
@@ -305,7 +302,6 @@
       if (count <= 0) clearInterval(timer);
     }, 1000);
 
-    // Confetti burst
     const colors = ['#7c3aed', '#a855f7', '#ec4899', '#06b6d4', '#22d3ee', '#10b981'];
     for (let i = 0; i < 40; i++) {
       const c = document.createElement('div');
