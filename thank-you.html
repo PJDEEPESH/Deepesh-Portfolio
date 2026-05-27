@@ -3,124 +3,322 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="refresh" content="5; url=/" />
+  <meta http-equiv="refresh" content="6; url=/" />
   <title>Message Sent — Deepesh PJ</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' font-family='Arial' font-weight='bold' fill='%237c3aed'%3ED%3C/text%3E%3C/svg%3E">
+
   <style>
-    :root {
-      --bg: #0a0a0f;
-      --text: #e8e8ef;
-      --text-dim: #a0a0b0;
-      --primary: #7c3aed;
-      --accent: #06b6d4;
-      --pink: #ec4899;
-      --gradient: linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #06b6d4 100%);
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
+      padding: 2rem 1rem;
       position: relative;
+      overflow: hidden;
     }
-    body::before {
-      content: '';
+
+    .ty-grid {
       position: absolute;
       inset: 0;
-      background:
-        radial-gradient(circle at 20% 30%, rgba(124, 58, 237, 0.2), transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(6, 182, 212, 0.15), transparent 50%);
+      background-image:
+        linear-gradient(rgba(124, 58, 237, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(124, 58, 237, 0.04) 1px, transparent 1px);
+      background-size: 50px 50px;
+      mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
       z-index: 0;
     }
-    .card {
+
+    .ty-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(90px);
+      opacity: 0.5;
+      z-index: 0;
+      animation: float-blob 18s ease-in-out infinite;
+    }
+    .ty-blob-1 { width: 500px; height: 500px; background: var(--primary); top: -150px; left: -100px; }
+    .ty-blob-2 { width: 450px; height: 450px; background: var(--accent); bottom: -150px; right: -100px; animation-delay: -6s; }
+    .ty-blob-3 { width: 350px; height: 350px; background: var(--pink); top: 30%; right: 25%; opacity: 0.3; animation-delay: -10s; }
+
+    .ty-card {
       position: relative;
-      z-index: 1;
+      z-index: 2;
+      max-width: 580px;
+      width: 100%;
+      padding: 3.5rem 2.5rem;
+      background: var(--surface-2);
+      border: 1px solid var(--border-2);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border-radius: var(--radius-lg);
       text-align: center;
-      padding: 3rem 2.5rem;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.1);
-      backdrop-filter: blur(20px);
-      border-radius: 24px;
-      max-width: 500px;
-      margin: 1rem;
-      animation: pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+      box-shadow: var(--shadow-lg);
+      animation: ty-pop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
-    @keyframes pop {
-      0% { opacity: 0; transform: scale(0.85); }
-      100% { opacity: 1; transform: scale(1); }
+
+    .ty-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient);
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
     }
-    .icon-wrap {
-      width: 100px;
-      height: 100px;
-      margin: 0 auto 1.5rem;
+
+    @keyframes ty-pop {
+      0% { opacity: 0; transform: scale(0.9) translateY(20px); }
+      100% { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    .ty-check-wrap {
+      position: relative;
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 2rem;
+    }
+
+    .ty-check-bg {
+      width: 100%;
+      height: 100%;
       border-radius: 50%;
       background: var(--gradient);
       display: flex;
       align-items: center;
       justify-content: center;
-      animation: pulse 2s ease-in-out infinite;
-      box-shadow: 0 0 60px rgba(124, 58, 237, 0.5);
+      box-shadow: 0 0 60px rgba(124, 58, 237, 0.6);
+      animation: ty-pulse 2.5s ease-in-out infinite;
+      position: relative;
+      z-index: 2;
     }
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-    }
-    .icon-wrap i {
-      font-size: 3rem;
+
+    .ty-check-bg i {
+      font-size: 3.5rem;
       color: white;
+      animation: ty-check-draw 0.6s ease 0.4s both;
     }
-    h1 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 2rem;
-      font-weight: 800;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      margin-bottom: 1rem;
+
+    @keyframes ty-pulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 60px rgba(124, 58, 237, 0.6); }
+      50% { transform: scale(1.05); box-shadow: 0 0 80px rgba(124, 58, 237, 0.8); }
     }
-    p { color: var(--text-dim); margin-bottom: 2rem; line-height: 1.6; }
-    .btn {
+
+    @keyframes ty-check-draw {
+      0% { transform: scale(0) rotate(-45deg); opacity: 0; }
+      100% { transform: scale(1) rotate(0); opacity: 1; }
+    }
+
+    .ty-ring {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 150px;
+      height: 150px;
+      border: 2px dashed rgba(124, 58, 237, 0.3);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      animation: ty-rotate 12s linear infinite;
+    }
+
+    .ty-ring-2 {
+      width: 180px;
+      height: 180px;
+      border-color: rgba(6, 182, 212, 0.25);
+      animation-duration: 18s;
+      animation-direction: reverse;
+    }
+
+    @keyframes ty-rotate {
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    .ty-badge {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      padding: 0.9rem 2rem;
-      background: var(--gradient);
-      color: white;
-      text-decoration: none;
+      gap: 0.6rem;
+      padding: 0.5rem 1rem;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.4);
       border-radius: 50px;
-      font-weight: 600;
-      transition: 0.3s;
-      box-shadow: 0 6px 25px rgba(124, 58, 237, 0.4);
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: #34d399;
+      margin-bottom: 1.25rem;
+      font-family: var(--font-mono);
     }
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 35px rgba(124, 58, 237, 0.6);
+
+    .ty-badge i { font-size: 0.7rem; }
+
+    .ty-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 2.75rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+      line-height: 1.1;
     }
-    .redirect-note {
-      margin-top: 1.5rem;
+
+    .ty-message {
+      color: var(--text-dim);
+      font-size: 1.02rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      max-width: 440px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .ty-message strong { color: var(--text); }
+
+    .ty-actions {
+      display: flex;
+      gap: 0.85rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .ty-socials {
+      display: flex;
+      gap: 0.85rem;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .ty-redirect {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+
+    .ty-redirect span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--surface-2);
+      border: 1px solid var(--border-2);
+      color: var(--primary-2);
+      font-weight: 700;
       font-size: 0.85rem;
-      color: #6b6b80;
+    }
+
+    .ty-confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      animation: confetti-fall 3s ease-in forwards;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    @keyframes confetti-fall {
+      0% { transform: translateY(-100vh) rotate(0); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+    }
+
+    @media (max-width: 600px) {
+      .ty-card { padding: 2.5rem 1.5rem; }
+      .ty-check-wrap { width: 90px; height: 90px; }
+      .ty-check-bg i { font-size: 2.75rem; }
+      .ty-ring { width: 130px; height: 130px; }
+      .ty-ring-2 { width: 155px; height: 155px; }
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="icon-wrap">
-      <i class="fa-solid fa-check"></i>
+
+  <div id="particles-bg"></div>
+
+  <div class="ty-grid"></div>
+  <div class="ty-blob ty-blob-1"></div>
+  <div class="ty-blob ty-blob-2"></div>
+  <div class="ty-blob ty-blob-3"></div>
+
+  <div class="ty-card">
+    <div class="ty-check-wrap">
+      <div class="ty-ring"></div>
+      <div class="ty-ring ty-ring-2"></div>
+      <div class="ty-check-bg">
+        <i class="fa-solid fa-check"></i>
+      </div>
     </div>
-    <h1>Message Sent!</h1>
-    <p>Thanks for reaching out. I'll get back to you within 24 hours at the email you provided.</p>
-    <a href="/" class="btn">
-      <i class="fa-solid fa-arrow-left"></i> Back to Home
-    </a>
-    <p class="redirect-note">Redirecting in 5 seconds...</p>
+
+    <div class="ty-badge">
+      <span class="status-dot"></span>
+      Message Delivered
+    </div>
+
+    <h1 class="ty-title">Thanks for <span class="gradient-text">Reaching Out!</span></h1>
+
+    <p class="ty-message">
+      Your message has been sent successfully. I'll get back to you within <strong>24 hours</strong> at the email you provided. In the meantime, feel free to explore my work or connect on socials.
+    </p>
+
+    <div class="ty-actions">
+      <a href="/" class="btn btn-primary">
+        <i class="fa-solid fa-house"></i> Back to Home
+      </a>
+      <a href="/#projects" class="btn btn-outline">
+        <i class="fa-solid fa-rocket"></i> View Projects
+      </a>
+    </div>
+
+    <div class="ty-socials">
+      <a href="https://github.com/PJDEEPESH" target="_blank" rel="noopener" class="social-icon" title="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/deepesh-pj-27546a20b/" target="_blank" rel="noopener" class="social-icon" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://leetcode.com/u/PJDeepesh/" target="_blank" rel="noopener" class="social-icon" title="LeetCode"><i class="fa-solid fa-code"></i></a>
+      <a href="https://www.geeksforgeeks.org/user/deepeshpj2004/" target="_blank" rel="noopener" class="social-icon" title="GeeksforGeeks"><i class="fa-solid fa-laptop-code"></i></a>
+      <a href="mailto:deepeshp.j.2004@gmail.com" class="social-icon" title="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://wa.me/917075087601" target="_blank" rel="noopener" class="social-icon" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+
+    <div class="ty-redirect">
+      <span id="countdown">6</span>
+      <span style="background: none; border: none; width: auto;">Redirecting you back to portfolio...</span>
+    </div>
   </div>
+
+  <script>
+    // Countdown
+    let count = 6;
+    const cd = document.getElementById('countdown');
+    const timer = setInterval(() => {
+      count--;
+      if (cd) cd.textContent = count;
+      if (count <= 0) clearInterval(timer);
+    }, 1000);
+
+    // Confetti burst
+    const colors = ['#7c3aed', '#a855f7', '#ec4899', '#06b6d4', '#22d3ee', '#10b981'];
+    for (let i = 0; i < 40; i++) {
+      const c = document.createElement('div');
+      c.className = 'ty-confetti';
+      c.style.left = Math.random() * 100 + 'vw';
+      c.style.background = colors[Math.floor(Math.random() * colors.length)];
+      c.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+      c.style.animationDelay = (Math.random() * 1.5) + 's';
+      c.style.animationDuration = (2.5 + Math.random() * 2) + 's';
+      c.style.width = c.style.height = (6 + Math.random() * 8) + 'px';
+      document.body.appendChild(c);
+      setTimeout(() => c.remove(), 5000);
+    }
+  </script>
 </body>
 </html>
