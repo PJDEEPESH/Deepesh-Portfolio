@@ -157,13 +157,51 @@ if (window.matchMedia('(pointer: fine)').matches) {
   });
 }
 
-// ===== Form: show success on Netlify redirect =====
-if (window.location.search.includes('success=1')) {
-  const success = document.getElementById('formSuccess');
-  if (success) {
-    success.style.display = 'block';
-    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }
+// ===== Contact form: AJAX submit to Netlify (no redirect, no 404) =====
+const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('formStatus');
+const submitBtn = document.getElementById('submitBtn');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const originalBtnHTML = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>Sending...</span>';
+    formStatus.style.display = 'none';
+
+    const formData = new FormData(contactForm);
+    const body = new URLSearchParams(formData).toString();
+
+    try {
+      const res = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: body
+      });
+
+      if (res.ok) {
+        formStatus.className = 'form-status success';
+        formStatus.innerHTML = '<i class="fa-solid fa-circle-check"></i> Thanks! Your message has been sent. I\'ll reply within 24 hours.';
+        formStatus.style.display = 'flex';
+        contactForm.reset();
+        submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> <span>Sent!</span>';
+        setTimeout(() => {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnHTML;
+        }, 3000);
+      } else {
+        throw new Error('Failed');
+      }
+    } catch (err) {
+      formStatus.className = 'form-status error';
+      formStatus.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> Something went wrong. Please email me directly at deepeshp.j.2004@gmail.com';
+      formStatus.style.display = 'flex';
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnHTML;
+    }
+  });
 }
 
 // ===== Force textarea placeholder for floating label trick =====
