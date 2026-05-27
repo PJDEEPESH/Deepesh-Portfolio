@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Deepesh PJ - AI Developer | LLM Engineer | Agentic AI | RAG Systems | Voice Agents | Automation" />
+  <meta name="keywords" content="Deepesh PJ, AI Developer, LLM Engineer, RAG, Agentic AI, LangChain, LangGraph, FastAPI, Python" />
+  <meta name="author" content="Deepesh PJ" />
+  <title>Deepesh PJ — AI Developer | LLM Engineer | Agentic AI</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' font-family='Arial' font-weight='bold' fill='%237c3aed'%3ED%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+  <div id="particles-bg"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-text">Deepesh</span>
+        <span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="Deepesh_PJ_Main.pdf" download class="nav-cta"><i class="fa-solid fa-download"></i> Resume</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-blob blob-1"></div>
+    <div class="hero-blob blob-2"></div>
+    <div class="hero-blob blob-3"></div>
+
+    <div class="container hero-container">
+      <div class="hero-left" data-aos="fade-right" data-aos-duration="1000">
+        <div class="hero-badge">
+          <span class="status-dot"></span>
+          Open to Work — Looking for Opportunities
+        </div>
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text">Deepesh PJ</span>
+        </h1>
+        <h2 class="hero-subtitle">
+          I build <span class="typed-text" id="typedText"></span><span class="cursor-blink">|</span>
+        </h2>
+        <p class="hero-desc">
+          AI Developer with <strong>1+ year of production experience</strong> shipping real AI systems — RAG pipelines, multi-agent orchestration, voice agents, and automation workflows. Sole technical owner from concept to deployment.
+        </p>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-num" data-target="10">0</div>
+            <div class="stat-label">Production<br/>Projects</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" data-target="15">0</div>
+            <div class="stat-label">Languages<br/>Supported</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" data-target="85">0</div>
+            <div class="stat-label">% Work<br/>Automated</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" data-target="67">0</div>
+            <div class="stat-label">Deployments<br/>Shipped</div>
+          </div>
+        </div>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fa-solid fa-rocket"></i> View My Work
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fa-solid fa-paper-plane"></i> Get In Touch
+          </a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/PJDEEPESH" target="_blank" rel="noopener" class="social-icon" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/deepesh-pj-27546a20b/" target="_blank" rel="noopener" class="social-icon" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://leetcode.com/u/PJDeepesh/" target="_blank" rel="noopener" class="social-icon" title="LeetCode"><i class="fa-solid fa-code"></i></a>
+          <a href="https://www.geeksforgeeks.org/user/deepeshpj2004/" target="_blank" rel="noopener" class="social-icon" title="GeeksforGeeks"><i class="fa-solid fa-laptop-code"></i></a>
+          <a href="https://www.naukri.com/code360/profile/33153871-41ca-447d-9d23-7c3c8276bf83" target="_blank" rel="noopener" class="social-icon" title="Coding Ninjas"><i class="fa-solid fa-terminal"></i></a>
+          <a href="mailto:deepeshp.j.2004@gmail.com" class="social-icon" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://wa.me/917075087601" target="_blank" rel="noopener" class="social-icon" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="hero-right" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+        <div class="hero-photo-wrap">
+          <div class="orbit orbit-1">
+            <div class="orbit-icon"><i class="fa-brands fa-python"></i></div>
+          </div>
+          <div class="orbit orbit-2">
+            <div class="orbit-icon"><i class="fa-solid fa-brain"></i></div>
+          </div>
+          <div class="orbit orbit-3">
+            <div class="orbit-icon"><i class="fa-solid fa-microchip"></i></div>
+          </div>
+          <div class="hero-photo">
+            <!-- Replace photo.jpg with your actual photo -->
+            <img src="photo.jpg" alt="Deepesh PJ" onerror="this.style.display='none'; document.getElementById('avatarFallback').style.display='flex';" />
+            <div class="avatar-fallback" id="avatarFallback">
+              <span>D</span>
+            </div>
+          </div>
+          <div class="floating-card card-tl">
+            <i class="fa-solid fa-robot"></i>
+            <div>
+              <div class="fc-title">AI Engineer</div>
+              <div class="fc-sub">Production AI</div>
+            </div>
+          </div>
+          <div class="floating-card card-br">
+            <i class="fa-solid fa-bolt"></i>
+            <div>
+              <div class="fc-title">LangChain</div>
+              <div class="fc-sub">LangGraph · MCP</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-down">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">01 — About Me</span>
+        <h2 class="section-title">Who <span class="gradient-text">Am I?</span></h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text" data-aos="fade-up">
+          <p>
+            I'm a <strong>CSE graduate (2025)</strong> from <strong>IIIT RGUKT RK Valley</strong>, currently working as an <strong>AI Developer at STRIKIN</strong>. Over the past year I've been heads-down building <strong>production AI systems</strong> — RAG systems, multi-agent orchestration, voice AI, and enterprise automation platforms that solve real business problems.
+          </p>
+          <p>
+            Beyond coding, I function as the <strong>sole technical decision maker</strong> — evaluating tools, managing costs, defining architecture, and delivering end-to-end from requirements to production deployment.
+          </p>
+          <p>
+            I don't just fine-tune prompts. I <strong>architect, ship, and lead</strong> — designing systems from database schema and API design to frontend interfaces and AI agent orchestration. Currently <strong>looking for full-time opportunities</strong> where I can build production AI at scale.
+          </p>
+
+          <div class="about-highlights">
+            <div class="highlight">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <div>
+                <strong>B.Tech CSE</strong>
+                <span>IIIT RGUKT RK Valley · GPA 8.0/10</span>
+              </div>
+            </div>
+            <div class="highlight">
+              <i class="fa-solid fa-briefcase"></i>
+              <div>
+                <strong>AI Developer @ STRIKIN</strong>
+                <span>Hyderabad · Jul 2025 – Present</span>
+              </div>
+            </div>
+            <div class="highlight">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Based in Hyderabad</strong>
+                <span>Open to remote & freelance work</span>
+              </div>
+            </div>
+            <div class="highlight">
+              <i class="fa-solid fa-language"></i>
+              <div>
+                <strong>Multilingual AI</strong>
+                <span>15+ languages supported in production</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-cards" data-aos="fade-up" data-aos-delay="200">
+          <div class="about-card">
+            <div class="ac-icon"><i class="fa-solid fa-sitemap"></i></div>
+            <h3>System Design</h3>
+            <p>Scalable architectures: microservices, async pipelines, vector stores, multi-agent systems from scratch.</p>
+          </div>
+          <div class="about-card">
+            <div class="ac-icon"><i class="fa-solid fa-users-gear"></i></div>
+            <h3>Tech Leadership</h3>
+            <p>Leading technical teams on AI automation — planning, code reviews, architecture, and delivery.</p>
+          </div>
+          <div class="about-card">
+            <div class="ac-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <h3>Full-Stack AI</h3>
+            <p>React frontends → FastAPI backends → AI/ML layers → cloud deployment. End-to-end ownership.</p>
+          </div>
+          <div class="about-card">
+            <div class="ac-icon"><i class="fa-solid fa-handshake"></i></div>
+            <h3>Open to Work</h3>
+            <p>Looking for full-time opportunities in AI engineering — RAG systems, agentic AI, voice AI, and production LLM applications.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">02 — Experience</span>
+        <h2 class="section-title">Where I've <span class="gradient-text">Worked</span></h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div>
+                <h3>AI Developer</h3>
+                <h4>STRIKIN · Hyderabad</h4>
+              </div>
+              <span class="tc-date">Jul 2025 — Present</span>
+            </div>
+            <p class="tc-role">Sole technical owner — architecting and shipping production AI systems end-to-end.</p>
+            <ul class="tc-bullets">
+              <li>Built <strong>AgenticRagMCP</strong> — multi-format RAG with 5 cooperating AI agents using LangGraph + MCP + Milvus + FastAPI; supports PDF, PPTX, CSV, DOCX, XLSX, OCR.</li>
+              <li>Developed <strong>multilingual voice agent</strong> with real-time STT/TTS (Deepgram + ElevenLabs), WebSockets, function calling, CRM integration.</li>
+              <li>Shipped <strong>Email Automation Suite</strong> — 3 production SaaS products: mass outreach, warmup platform (multi-tenant), and 24/7 summarization agent.</li>
+              <li>Engineered <strong>Finance Automation Pipeline</strong> (n8n + FastAPI + PostgreSQL) — reduced manual finance work by <strong>85%</strong>.</li>
+              <li>Built <strong>Lead Generation Agent</strong> — scrapes Google/RSS/LinkedIn, qualifies leads with LLMs, automates outreach 24/7.</li>
+              <li>Functioned as <strong>product manager</strong> — tool selection, cost optimization, architecture decisions, stakeholder demos.</li>
+            </ul>
+            <div class="tc-tags">
+              <span>LangChain</span><span>LangGraph</span><span>MCP</span><span>FastAPI</span><span>Milvus</span><span>OpenAI</span><span>Deepgram</span><span>n8n</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div>
+                <h3>Freelance AI Developer</h3>
+                <h4>Independent · Remote</h4>
+              </div>
+              <span class="tc-date">Jan 2025 — Jun 2025</span>
+            </div>
+            <p class="tc-role">Client-facing AI development — requirements to deployment.</p>
+            <ul class="tc-bullets">
+              <li>Built <strong>Yara AI (Gem)</strong> — multilingual WhatsApp RAG chatbot for Buenos Aires tourism; <strong>15+ languages</strong>, Milvus vector DB auto-updated every 24h, live in production.</li>
+              <li>Delivered <strong>2+ client projects</strong> — full-stack applications with AI chatbot integrations.</li>
+              <li>Led client requirement discussions and translated business needs into technical workflows.</li>
+            </ul>
+            <div class="tc-tags">
+              <span>Python</span><span>Flask</span><span>Twilio</span><span>OpenAI</span><span>Milvus</span><span>PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div>
+                <h3>B.Tech — Computer Science & Engineering</h3>
+                <h4>IIIT RGUKT RK Valley</h4>
+              </div>
+              <span class="tc-date">Jul 2021 — May 2025</span>
+            </div>
+            <p class="tc-role">Graduated with GPA <strong>8.0 / 10</strong>. Focused on AI/ML, data structures, system design, and full-stack development.</p>
+            <div class="tc-tags">
+              <span>CSE</span><span>AI/ML</span><span>DSA</span><span>System Design</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">03 — Projects</span>
+        <h2 class="section-title">Things I've <span class="gradient-text">Built</span></h2>
+        <p class="section-sub">Production AI systems serving real users — not just demos.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <div class="project-card" data-aos="fade-up">
+          <div class="pc-header">
+            <div class="pc-icon"><i class="fa-solid fa-network-wired"></i></div>
+            <span class="pc-badge featured">Featured</span>
+          </div>
+          <h3>AgenticRagMCP</h3>
+          <p>Multi-format RAG system with <strong>5 cooperating AI agents</strong> communicating via MCP messages on a shared vector database. Supports PDF, PPTX, CSV, DOCX, XLSX, scanned PDFs (OCR). Real-time MCP Trace panel for full agent visibility.</p>
+          <div class="pc-stack">
+            <span>Python</span><span>FastAPI</span><span>LangGraph</span><span>MCP</span><span>Milvus</span><span>OpenAI</span>
+          </div>
+          <div class="pc-links">
+            <a href="https://github.com/PJDEEPESH/AgenticRagMCP" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="pc-header">
+            <div class="pc-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <span class="pc-badge live">Live</span>
+          </div>
+          <h3>Yara AI — WhatsApp RAG Chatbot</h3>
+          <p>Multilingual chatbot (<strong>15+ languages</strong>) serving real users in Buenos Aires — events, bars, restaurants. Milvus vector DB auto-updated every 24h. <strong>67 production deployments</strong>; intelligent LLM fallback when data not in DB.</p>
+          <div class="pc-stack">
+            <span>Python</span><span>Flask</span><span>Twilio</span><span>OpenAI</span><span>Milvus</span><span>PostgreSQL</span>
+          </div>
+          <div class="pc-links">
+            <a href="https://github.com/PJDEEPESH/Whatsappchatbot" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="pc-header">
+            <div class="pc-icon"><i class="fa-solid fa-envelope-circle-check"></i></div>
+            <span class="pc-badge">SaaS</span>
+          </div>
+          <h3>Email Mass Outreach Agent</h3>
+          <p>SaaS platform for intelligent email outreach at scale. AI-powered personalization, list segmentation, automated follow-up sequences with contextual awareness, response handling.</p>
+          <div class="pc-stack">
+            <span>Python</span><span>FastAPI</span><span>n8n</span><span>JWT</span><span>Docker</span>
+          </div>
+          <div class="pc-links">
+            <a href="https://github.com/PJDEEPESH/EmailMassOutreachAgent" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="pc-header">
+            <div class="pc-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+            <span class="pc-badge">SaaS</span>
+          </div>
+          <h3>Email Warmup Agent</h3>
+          <p>Multi-tenant SaaS platform for email warmup and deliverability optimization. Automated inbox monitoring, smart scheduling, engagement tracking — prevents emails from hitting spam.</p>
+          <div class="pc-stack">
+            <span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>JWT</span>
+          </div>
+          <div class="pc-links">
+            <a href="https://github.com/PJDEEPESH/EmailWarmUpAgent" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up">
+          <div class="pc-header">
+            <div class="pc-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+            <span class="pc-badge">24/7</span>
+          </div>
+          <h3>Email Summarize Agent</h3>
+          <p>24/7 AI agent monitoring Microsoft 365 inboxes. Summarizes emails and PDFs with Google Gemini, delivers WhatsApp briefings via Twilio. Real-time pipeline with attachment processing.</p>
+          <div class="pc-stack">
+            <span>Python</span><span>MS 365</span><span>Gemini</span><span>Twilio</span><span>FastAPI</span>
+          </div>
+          <div class="pc-links">
+            <a href="https://github.com/PJDEEPESH/EmailSummarizeAgent" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="pc-header">
+            <div class="pc-icon"><i class="fa-solid fa-money-bill-trend-up"></i></div>
+            <span class="pc-badge featured">85% Auto</span>
+          </div>
+          <h3>Finance Automation Pipeline</h3>
+          <p>End-to-end automation replacing hours of daily manual finance work — <strong>85% reduction</strong>. Invoice processing, reconciliation, P&L reporting, reimbursement tracking — fully automated.</p>
+          <div class="pc-stack">
+            <span>n8n</span><span>FastAPI</span><span>Python</span><span>PostgreSQL</span><span>REST</span>
+          </div>
+          <div class="pc-links">
+            <a href="https://github.com/PJDEEPESH" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="pc-header">
+            <div class="pc-icon"><i class="fa-solid fa-microphone-lines"></i></div>
+            <span class="pc-badge">Voice AI</span>
+          </div>
+          <h3>Multilingual Voice Assistant</h3>
+          <p>Bilingual/multilingual voice agent with real-time language detection. Natural multi-turn conversations across languages. Combines NLP, STT, TTS via WebSockets.</p>
+          <div class="pc-stack">
+            <span>Python</span><span>Deepgram</span><span>ElevenLabs</span><span>WebSockets</span><span>LLMs</span>
+          </div>
+          <div class="pc-links">
+            <a href="https://github.com/PJDEEPESH" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="pc-header">
+            <div class="pc-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+            <span class="pc-badge">AI</span>
+          </div>
+          <h3>AI Lead Generation Agent</h3>
+          <p>Automated scraping (Google/RSS/LinkedIn) + AI scoring + classification. Personalized outreach with CRM ingestion pipeline running 24/7.</p>
+          <div class="pc-stack">
+            <span>Puppeteer</span><span>Playwright</span><span>Selenium</span><span>n8n</span><span>CRM APIs</span>
+          </div>
+          <div class="pc-links">
+            <a href="https://github.com/PJDEEPESH/AI-Sales-Marketing" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up">
+          <div class="pc-header">
+            <div class="pc-icon"><i class="fa-solid fa-user-secret"></i></div>
+            <span class="pc-badge">Chatbot</span>
+          </div>
+          <h3>Persona AI</h3>
+          <p>Chatbot that lets users chat with their favorite character/personality. Customizable persona system with conversation memory.</p>
+          <div class="pc-stack">
+            <span>TypeScript</span><span>React</span><span>LLMs</span>
+          </div>
+          <div class="pc-links">
+            <a href="https://github.com/PJDEEPESH/Person-AI" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="pc-header">
+            <div class="pc-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+            <span class="pc-badge">MVP</span>
+          </div>
+          <h3>SLNS Billing Software</h3>
+          <p>Billing software MVP built for a small business. Full-stack TypeScript application with invoicing, customer management, and reports.</p>
+          <div class="pc-stack">
+            <span>TypeScript</span><span>React</span><span>Node.js</span>
+          </div>
+          <div class="pc-links">
+            <a href="https://github.com/PJDEEPESH/SLNS-Billing-Software-" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="pc-header">
+            <div class="pc-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <span class="pc-badge">Security</span>
+          </div>
+          <h3>XSS Vulnerability LLM Agent</h3>
+          <p>LLM-based analysis tool that identifies and reproduces XSS vulnerabilities in web pages. Demonstrates real-world stored XSS detection.</p>
+          <div class="pc-stack">
+            <span>PHP</span><span>LLMs</span><span>Security</span>
+          </div>
+          <div class="pc-links">
+            <a href="https://github.com/PJDEEPESH/Xss_Vulnerability_LLm_Agent" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="pc-header">
+            <div class="pc-icon"><i class="fa-solid fa-briefcase"></i></div>
+            <span class="pc-badge">ML</span>
+          </div>
+          <h3>Fake Job Prediction</h3>
+          <p>ML project that identifies and predicts fraudulent job postings using data analysis and classification techniques.</p>
+          <div class="pc-stack">
+            <span>Python</span><span>Jupyter</span><span>ML</span><span>Pandas</span>
+          </div>
+          <div class="pc-links">
+            <a href="https://github.com/PJDEEPESH/Fake-Job-Prediction" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="projects-cta" data-aos="fade-up">
+        <a href="https://github.com/PJDEEPESH?tab=repositories" target="_blank" rel="noopener" class="btn btn-outline">
+          <i class="fa-brands fa-github"></i> View All 36 Repositories
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">04 — Skills</span>
+        <h2 class="section-title">My <span class="gradient-text">Tech Stack</span></h2>
+        <p class="section-sub">Tools I use to ship production AI systems.</p>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-cat" data-aos="fade-up">
+          <h3><i class="fa-solid fa-brain"></i> AI / LLM</h3>
+          <div class="skill-tags">
+            <span>LangChain</span><span>LangGraph</span><span>OpenAI</span><span>Groq</span><span>Gemini</span>
+            <span>HuggingFace</span><span>RAG</span><span>Agentic AI</span><span>MCP</span><span>Prompt Eng.</span><span>Function Calling</span>
+          </div>
+        </div>
+
+        <div class="skill-cat" data-aos="fade-up" data-aos-delay="100">
+          <h3><i class="fa-solid fa-microphone"></i> Voice AI</h3>
+          <div class="skill-tags">
+            <span>Deepgram (STT)</span><span>ElevenLabs (TTS)</span><span>Whisper</span><span>WebSockets</span><span>VAD</span><span>Multilingual NLP</span>
+          </div>
+        </div>
+
+        <div class="skill-cat" data-aos="fade-up" data-aos-delay="200">
+          <h3><i class="fa-solid fa-database"></i> Vector DBs</h3>
+          <div class="skill-tags">
+            <span>Milvus</span><span>pgvector</span><span>ChromaDB</span><span>FAISS</span><span>Semantic Search</span><span>Hybrid Retrieval</span>
+          </div>
+        </div>
+
+        <div class="skill-cat" data-aos="fade-up">
+          <h3><i class="fa-solid fa-server"></i> Backend</h3>
+          <div class="skill-tags">
+            <span>Python</span><span>FastAPI</span><span>Flask</span><span>Node.js</span><span>Express</span><span>REST APIs</span><span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span>
+          </div>
+        </div>
+
+        <div class="skill-cat" data-aos="fade-up" data-aos-delay="100">
+          <h3><i class="fa-solid fa-robot"></i> Automation</h3>
+          <div class="skill-tags">
+            <span>n8n</span><span>Playwright</span><span>Puppeteer</span><span>Selenium</span><span>BeautifulSoup</span><span>CRM APIs</span><span>Twilio</span>
+          </div>
+        </div>
+
+        <div class="skill-cat" data-aos="fade-up" data-aos-delay="200">
+          <h3><i class="fa-solid fa-cloud"></i> DevOps</h3>
+          <div class="skill-tags">
+            <span>Docker</span><span>Git</span><span>GitHub</span><span>Railway</span><span>GCP</span><span>AWS</span><span>Azure</span><span>CI/CD</span><span>Netlify</span>
+          </div>
+        </div>
+
+        <div class="skill-cat" data-aos="fade-up">
+          <h3><i class="fa-brands fa-react"></i> Frontend</h3>
+          <div class="skill-tags">
+            <span>React</span><span>TypeScript</span><span>TailwindCSS</span><span>HTML5</span><span>CSS3</span><span>Bootstrap</span>
+          </div>
+        </div>
+
+        <div class="skill-cat" data-aos="fade-up" data-aos-delay="100">
+          <h3><i class="fa-solid fa-code"></i> Languages</h3>
+          <div class="skill-tags">
+            <span>Python</span><span>Java</span><span>JavaScript</span><span>TypeScript</span><span>SQL</span><span>C</span><span>Solidity</span>
+          </div>
+        </div>
+
+        <div class="skill-cat" data-aos="fade-up" data-aos-delay="200">
+          <h3><i class="fa-solid fa-diagram-project"></i> Architecture</h3>
+          <div class="skill-tags">
+            <span>Microservices</span><span>Async Pipelines</span><span>Multi-Agent Systems</span><span>System Design</span><span>API Design</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Coding profiles -->
+      <div class="coding-profiles" data-aos="fade-up">
+        <h3 class="cp-title">Find me on coding platforms</h3>
+        <div class="cp-grid">
+          <a href="https://github.com/PJDEEPESH" target="_blank" rel="noopener" class="cp-card">
+            <i class="fa-brands fa-github"></i>
+            <div>
+              <div class="cp-name">GitHub</div>
+              <div class="cp-handle">@PJDEEPESH</div>
+            </div>
+          </a>
+          <a href="https://leetcode.com/u/PJDeepesh/" target="_blank" rel="noopener" class="cp-card">
+            <i class="fa-solid fa-code"></i>
+            <div>
+              <div class="cp-name">LeetCode</div>
+              <div class="cp-handle">@PJDeepesh</div>
+            </div>
+          </a>
+          <a href="https://www.geeksforgeeks.org/user/deepeshpj2004/" target="_blank" rel="noopener" class="cp-card">
+            <i class="fa-solid fa-laptop-code"></i>
+            <div>
+              <div class="cp-name">GeeksforGeeks</div>
+              <div class="cp-handle">@deepeshpj2004</div>
+            </div>
+          </a>
+          <a href="https://www.naukri.com/code360/profile/33153871-41ca-447d-9d23-7c3c8276bf83" target="_blank" rel="noopener" class="cp-card">
+            <i class="fa-solid fa-terminal"></i>
+            <div>
+              <div class="cp-name">Coding Ninjas</div>
+              <div class="cp-handle">Code360</div>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/deepesh-pj-27546a20b/" target="_blank" rel="noopener" class="cp-card">
+            <i class="fa-brands fa-linkedin"></i>
+            <div>
+              <div class="cp-name">LinkedIn</div>
+              <div class="cp-handle">deepesh-pj</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">05 — Contact</span>
+        <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+        <p class="section-sub">Open to AI consulting, full-time roles, and freelance projects. Reach out — I reply fast.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info" data-aos="fade-right">
+          <div class="contact-item">
+            <div class="ci-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <span>Email</span>
+              <a href="mailto:deepeshp.j.2004@gmail.com">deepeshp.j.2004@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <span>Mobile</span>
+              <a href="tel:+917075087601">+91 70750 87601</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <div>
+              <span>WhatsApp</span>
+              <a href="https://wa.me/917075087601" target="_blank" rel="noopener">+91 70750 87601</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <span>Location</span>
+              <a href="#">Hyderabad, India</a>
+            </div>
+          </div>
+
+          <div class="contact-socials">
+            <a href="https://github.com/PJDEEPESH" target="_blank" rel="noopener" class="social-icon"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/deepesh-pj-27546a20b/" target="_blank" rel="noopener" class="social-icon"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://leetcode.com/u/PJDeepesh/" target="_blank" rel="noopener" class="social-icon"><i class="fa-solid fa-code"></i></a>
+            <a href="https://www.geeksforgeeks.org/user/deepeshpj2004/" target="_blank" rel="noopener" class="social-icon"><i class="fa-solid fa-laptop-code"></i></a>
+            <a href="https://www.naukri.com/code360/profile/33153871-41ca-447d-9d23-7c3c8276bf83" target="_blank" rel="noopener" class="social-icon"><i class="fa-solid fa-terminal"></i></a>
+          </div>
+        </div>
+
+        <form class="contact-form" data-aos="fade-left" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="hidden"><label>Don't fill this out: <input name="bot-field" /></label></p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" name="name" id="name" required />
+              <label for="name">Your Name</label>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" id="email" required />
+              <label for="email">Your Email</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" name="subject" id="subject" required />
+            <label for="subject">Subject</label>
+          </div>
+          <div class="form-group">
+            <textarea name="message" id="message" rows="5" required></textarea>
+            <label for="message">Your Message</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+          <p id="formSuccess" class="form-success" style="display:none;">
+            <i class="fa-solid fa-circle-check"></i> Thank you! I'll get back to you soon.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="#home" class="nav-logo">
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-text">Deepesh</span>
+          <span class="logo-bracket">/&gt;</span>
+        </a>
+        <p>Building production AI for real businesses.</p>
+      </div>
+      <div class="footer-right">
+        <div class="footer-socials">
+          <a href="https://github.com/PJDEEPESH" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/deepesh-pj-27546a20b/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://leetcode.com/u/PJDeepesh/" target="_blank" rel="noopener"><i class="fa-solid fa-code"></i></a>
+          <a href="mailto:deepeshp.j.2004@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://wa.me/917075087601" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <p class="footer-copy">© <span id="year"></span> Deepesh PJ. Crafted with passion in Hyderabad.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </a>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
